@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ruta múltiple con Leaflet</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info">
+        <form>
+            <label for="distance">Distancia (km):</label>
+            <input type="text" id="distance" name="distance" readonly><br>
+            <label for="operating_hours">Horas de operación:</label>
+            <input type="text" id="operating_hours" name="operating_hours" readonly><br>
+            <label for="fuel_liters">Litros de combustible:</label>
+            <input type="text" id="fuel_liters" name="fuel_liters" readonly><br>
+            <label for="fuel_cost">Costo de combustible:</label>
+            <input type="text" id="fuel_cost" name="fuel_cost" readonly><br>
+            <label for="toll_cost">Costo de peajes:</label>
+            <input type="text" id="toll_cost" name="toll_cost" readonly><br>
+        </form>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
+
